@@ -58,13 +58,15 @@
           </div>-->
 
           <!-- Note: class .show is used for demo purposes. Remove it when using it in the real project. -->
-          <div class="alert alert-danger mb-0 alert-dismissible alert-absolute fade show " id="alertExample" role="alert" data-mdb-color="secondary" data-mdb-delay="3000">
-            <i class="fas fa-check me-2"></i>
-            Hello! I am a simple alert
-            <a href="#" class="alert-link me-1">with an additional link</a>
-            <button type="button" class="btn-close ms-2" data-mdb-dismiss="alert" aria-label="Close"></button>
-          </div>
-
+          <#if ec.web.savedErrors??>
+            <#list ec.web.savedErrors as errorMessage>
+            <div class="alert alert-danger alert-dismissible" id="alertExample" role="alert" data-mdb-color="secondary" data-mdb-delay="3000">
+              <i class="fas fa-check me-2"></i>
+              ${errorMessage}
+              <button type="button" class="btn-close ms-2" data-mdb-dismiss="alert" aria-label="Close"></button>
+            </div>
+            </#list>
+          </#if>
           <div class="px-5 ms-xl-4">
             <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
             <span class="h1 fw-bold mb-0">Logo</span>
@@ -92,7 +94,6 @@
               </div>
 
               <div class="form-outline mb-4">
-<!--                <input type="password" class="form-control form-control-lg" />-->
                 <input type="password"
                        name="password"
                        id="login_form_password"
