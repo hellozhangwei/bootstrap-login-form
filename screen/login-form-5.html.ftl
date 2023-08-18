@@ -5,15 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Material Design for Bootstrap</title>
+  <title>Login</title>
   <!-- MDB icon -->
-  <link rel="icon" href="/blfstatic/img/mdb-favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
   <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="/blfstatic/css/bootstrap-login-form.min.css" />
+  <script src="/libs/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="/libs/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -37,7 +39,29 @@
   <section class="vh-100">
     <div class="container-fluid">
       <div class="row">
+
         <div class="col-sm-6 text-black">
+          <div class="alert alert-danger" role="alert" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" style="float:right;color: inherit;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="alert alert-warning fade show" role="alert" data-mdb-delay="3000">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="float:right;color: inherit;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <!-- Note: class .show is used for demo purposes. Remove it when using it in the real project. -->
+          <div class="alert alert-primary mb-0 alert-dismissible alert-absolute fade show " id="alertExample" role="alert" data-mdb-color="secondary" data-mdb-delay="3000">
+            <i class="fas fa-check me-2"></i>
+            Hello! I am a simple alert
+            <a href="#" class="alert-link me-1">with an additional link</a>
+            <button type="button" class="btn-close ms-2" data-mdb-dismiss="alert" aria-label="Close"></button>
+          </div>
 
           <div class="px-5 ms-xl-4">
             <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
@@ -46,13 +70,12 @@
 
           <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-            <form style="width: 23rem;" method="post" action="${sri.buildUrl("login").url}">
+            <form style="width: 23rem;" method="post" action="${sri.buildUrl('login').url}">
               <input type="hidden" name="initialTab" value="login">
 
               <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
               <div class="form-outline mb-4">
-<!--                <input type="email" id="form2Example18" class="form-control form-control-lg" />-->
                 <input id="login_form_username"
                        class="form-control form-control-lg"
                        required="required"
