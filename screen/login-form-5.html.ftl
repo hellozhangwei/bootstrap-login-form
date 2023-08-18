@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="/blfstatic/css/bootstrap-login-form.min.css" />
-  <script src="/libs/jquery/jquery.min.js" type="text/javascript"></script>
-  <script src="/libs/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<!--  <script src="/libs/jquery/jquery.min.js" type="text/javascript"></script>-->
+<!--  <script src="/libs/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>-->
 </head>
 
 <body>
@@ -41,22 +41,24 @@
       <div class="row">
 
         <div class="col-sm-6 text-black">
-          <div class="alert alert-danger" role="alert" role="alert">
+          <!--need jquery.min.js and bootstrap.min.js-->
+          <!--<div class="alert alert-danger" role="alert" role="alert">
             <strong>Holy guacamole!</strong> You should check in on some of those fields below.
             <button type="button" class="close" data-dismiss="alert" style="float:right;color: inherit;">
               <span aria-hidden="true">&times;</span>
             </button>
-          </div>
+          </div>-->
 
-          <div class="alert alert-warning fade show" role="alert" data-mdb-delay="3000">
+          <!--need jquery.min.js and bootstrap.min.js-->
+          <!--<div class="alert alert-warning fade show" role="alert" data-mdb-delay="3000">
             <strong>Holy guacamole!</strong> You should check in on some of those fields below.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="float:right;color: inherit;">
               <span aria-hidden="true">&times;</span>
             </button>
-          </div>
+          </div>-->
 
           <!-- Note: class .show is used for demo purposes. Remove it when using it in the real project. -->
-          <div class="alert alert-primary mb-0 alert-dismissible alert-absolute fade show " id="alertExample" role="alert" data-mdb-color="secondary" data-mdb-delay="3000">
+          <div class="alert alert-danger mb-0 alert-dismissible alert-absolute fade show " id="alertExample" role="alert" data-mdb-color="secondary" data-mdb-delay="3000">
             <i class="fas fa-check me-2"></i>
             Hello! I am a simple alert
             <a href="#" class="alert-link me-1">with an additional link</a>
